@@ -2,4 +2,7 @@
 <resources>
     <string name="hello">Hello World, PlayrActivity!</string>
     <string name="app_name">Playr</string>
+    <string name="backward">Back</string>
+    <string name="play">Play</string>
+    <string name="forward">Next</string>
 </resources>
