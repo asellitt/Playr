@@ -173,8 +173,16 @@ public class PlayrActivity
         Log.i( getString( R.string.app_name ), "-> triggerMediaIntent( keyevent:" + keyevent + ")" );
         updateActionLabel( "triggering via API" );
         
+        KeyEvent ke = new KeyEvent( KeyEvent.ACTION_DOWN, keyevent );
+        
         Intent i = new Intent( "android.intent.action.MEDIA_BUTTON" );
-        i.putExtra( "android.intent.extra.KEY_EVENT", keyevent );
+        i.putExtra( "android.intent.extra.KEY_EVENT", ke );
+        sendBroadcast( i );
+        
+        ke = new KeyEvent( KeyEvent.ACTION_UP, keyevent );
+        
+        i = new Intent( "android.intent.action.MEDIA_BUTTON" );
+        i.putExtra( "android.intent.extra.KEY_EVENT", ke );
         sendBroadcast( i );
         
         Log.i( getString( R.string.app_name ), "<- triggerMediaIntent" );
