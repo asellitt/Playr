@@ -5,4 +5,8 @@
     <string name="backward">Back</string>
     <string name="play">Play</string>
     <string name="forward">Next</string>
+    <string name="action">Action</string>
+    <string name="toggle">Toggle</string>
+    <string name="tasker">Tasker</string>
+    <string name="api">API</string>
 </resources>

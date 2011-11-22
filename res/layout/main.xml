@@ -1,9 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="horizontal">
-    <Button android:text="@string/backward" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/button1"></Button>
-    <Button android:text="@string/play" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/button2"></Button>
-    <Button android:text="@string/forward" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/button3"></Button>
+    android:padding="5dp" 
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/rootContainer"
+>
+
+    <LinearLayout 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="5dp" 
+        android:id="@+id/contentContainer" 
+        android:orientation="vertical"
+    >
+    
+        <LinearLayout 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal" 
+            android:padding="5dp"
+            android:id="@+id/buttonContainer"
+        >
+            <Button 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:onClick="fireBackwardEvent" 
+                android:text="@string/backward"
+                android:id="@+id/backwardButton"
+                android:width="90dp"
+                android:height="70dp"
+            ></Button>
+            
+            <Button 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:onClick="firePlayEvent" 
+                android:id="@+id/playButton" 
+                android:text="@string/play"
+                android:width="90dp"
+                android:height="70dp"
+            ></Button>
+            
+            <Button 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:onClick="fireForwardEvent" 
+                android:id="@+id/forwardButton" 
+                android:text="@string/forward"
+                android:width="90dp"
+                android:height="70dp"
+            ></Button>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <TextView 
+        android:layout_width="wrap_content" 
+        android:text="@string/action" 
+        android:id="@+id/actionLabel" 
+        android:padding="5dp"
+        android:layout_height="wrap_content" 
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:background="#333333"
+        android:height="320dp"
+        android:maxHeight="320dp"
+        android:width="290dp"
+        android:maxWidth="290dp"
+    ></TextView>
+    
+    <LinearLayout 
+      android:layout_width="match_parent" 
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical|center_horizontal" 
+      android:padding="5dp"
+      android:id="@+id/toggleContainer"
+    >
+        <Button 
+            android:text="@string/toggle" 
+            android:id="@+id/toggleButton" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:onClick="toggleTriggerType" 
+        ></Button>
+        
+        <TextView 
+            android:text="@string/tasker" 
+            android:id="@+id/toggleLabel" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+        ></TextView>
+        
+    </LinearLayout>
+        
 </LinearLayout>
