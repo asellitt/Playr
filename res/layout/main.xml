@@ -68,34 +68,10 @@
         android:layout_height="wrap_content" 
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:background="#333333"
-        android:height="320dp"
-        android:maxHeight="320dp"
+        android:height="370dp"
+        android:maxHeight="370dp"
         android:width="290dp"
         android:maxWidth="290dp"
     ></TextView>
-    
-    <LinearLayout 
-      android:layout_width="match_parent" 
-      android:layout_height="wrap_content"
-      android:gravity="center_vertical|center_horizontal" 
-      android:padding="5dp"
-      android:id="@+id/toggleContainer"
-    >
-        <Button 
-            android:text="@string/toggle" 
-            android:id="@+id/toggleButton" 
-            android:layout_width="wrap_content" 
-            android:layout_height="wrap_content"
-            android:onClick="toggleTriggerType" 
-        ></Button>
-        
-        <TextView 
-            android:text="@string/tasker" 
-            android:id="@+id/toggleLabel" 
-            android:layout_width="wrap_content" 
-            android:layout_height="wrap_content"
-        ></TextView>
-        
-    </LinearLayout>
         
 </LinearLayout>
